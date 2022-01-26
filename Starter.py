@@ -38,7 +38,7 @@ def timer(end_timestamp):
         if time_left == "0:00:00" or time_left == "00:00:00":
             break
 
-    print("\n\n-------------------------------\nThe Study Session has ended, please \nClose his window to shut down the \nDiscord Activity\n-------------------------------")
+    print("\n\n-------------------------------\nThe Study Session has ended, please \nClose this window to shut down the \nDiscord Activity\n-------------------------------")
     
     # Playing the Notification Sound
     mixer.init()
