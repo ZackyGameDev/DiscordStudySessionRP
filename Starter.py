@@ -12,7 +12,7 @@ def suffixed_time_to_int(string_representation_of_time: str) -> int:
     """
     This function takes something like `"2m 6h 1s"` and returns back the time duration in seconds (int)
     """
-    time = string_representation_of_time.split()
+    time = string_representation_of_time.strip().split()
     for i in range(len(time)):
         if time[i].endswith("s"):
             time[i] = int(time[i][:-1])
@@ -61,7 +61,7 @@ print(
 
 # Getting the status report
 study_duration: int = suffixed_time_to_int(input("How long will this study session last?\n(for e.g. 2h 6m 1s)\nOnce the session is over, a notification sound will play\n> "))
-status: str = input("\nWhat is your current status?\n(for e.g. Studied 2 hours so far, or, Trying to focus)\n> ")
+status: str = input("\nWhat is your current status?\n(for e.g. Studied 2 hours so far, or, Trying to focus)\n> ").strip()
 start_timestamp: int = int(time.time())
 end_timestamp: int = start_timestamp + study_duration
 
